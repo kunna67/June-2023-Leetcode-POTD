@@ -1,10 +1,30 @@
 // 744. Find smallest letter greater than target
 
 
+//beats 94.29% of solutions
+// time complexity: O(n)
+class Solution {
+public:
+    char nextGreatestLetter(vector<char>& letters, char target) {
+        // using simple for loop
+        for(int i=0; i<letters.size(); i++)
+        {
+            //cout<<letters[i]<<" "<<target<<endl;
+            if(letters[i]<=target)
+                continue;
+            else
+                return letters[i];
+        }
+        return letters[0];
+    }
+};
+
+
 
 // some error while using binary search and accessing elements
 // might be trying to access elements outside vector
 
+/*
 class Solution {
 public:
     char nextGreatestLetter(vector<char>& letters, char target) {
@@ -46,3 +66,5 @@ public:
         return 'a';
     }
 };
+
+*/
